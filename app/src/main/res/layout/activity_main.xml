@@ -9,7 +9,60 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/itemsRv"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp" />
+        android:layout_height="550dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="Submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/itemUrlEt"
+        android:layout_width="240dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="15dp"
+        android:hint="Ex. https.//example.com/"
+        android:lines="1"
+        android:maxLines="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        ></EditText>
+
+    <EditText
+        android:id="@+id/itemNameEt"
+        android:layout_width="240dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="15dp"
+        android:hint="Item Name"
+        android:lines="1"
+        android:maxLines="1"
+        app:layout_constraintBottom_toTopOf="@+id/itemUrlEt"
+        app:layout_constraintStart_toStartOf="parent">
+        >
+    </EditText>
+
+    <EditText
+        android:id="@+id/itemPriceEt"
+        android:layout_width="116dp"
+        android:layout_height="52dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="16dp"
+        android:hint="Ex. 1.99"
+        android:lines="1"
+        android:maxLines="1"
+        app:layout_constraintBottom_toTopOf="@+id/addButton"
+        app:layout_constraintEnd_toEndOf="parent">
+        >
+    </EditText>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
