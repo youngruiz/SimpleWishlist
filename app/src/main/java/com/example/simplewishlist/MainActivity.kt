@@ -24,8 +24,9 @@ class MainActivity : AppCompatActivity() {
 
         // Lookup the RecyclerView in activity layout
         val itemsRv = findViewById<RecyclerView>(R.id.itemsRv)
-        // Fetch the list of emails
+        // Fetch the list of emails and get the size of the list of items list.
         items = ItemFetcher.getItems()
+        var curSize = items.size
         // Create adapter passing in the list of emails
         val adapter = ItemAdapter(items)
         // Attach the adapter to the RecyclerView to populate items
@@ -56,6 +57,13 @@ class MainActivity : AppCompatActivity() {
             Log.i("Daniel", newItemUrl)
             Log.i("Daniel", newItemPrice)
 
+
+            Log.i("Daniel Ruiz", items.size.toString())
+
+            (items as MutableList<Item>).add(Item(newItemName, newItemUrl, newItemUrl))
+            Log.i("Daniel", items.size.toString())
+            curSize += 1
+            adapter.notifyItemInserted(curSize-1)
 
 
             // Reset EditText input fields
