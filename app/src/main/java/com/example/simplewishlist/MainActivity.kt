@@ -60,7 +60,7 @@ class MainActivity : AppCompatActivity() {
 
             Log.i("Daniel Ruiz", items.size.toString())
 
-            (items as MutableList<Item>).add(Item(newItemName, newItemUrl, newItemUrl))
+            (items as MutableList<Item>).add(Item(newItemName, newItemUrl, newItemPrice))
             Log.i("Daniel", items.size.toString())
             curSize += 1
             adapter.notifyItemInserted(curSize-1)
